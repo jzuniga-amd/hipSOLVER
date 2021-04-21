@@ -9,10 +9,11 @@ Download pre-built packages either from [ROCm's package servers](https://rocmdoc
 
 ### Build & install library Using Script (Ubuntu only)
 The root of this repository has a helper bash script `install.sh` to build and install hipSOLVER on Ubuntu with a single command.  It does not take a lot of options and hard-codes configuration that can be specified through invoking cmake directly, but it's a great way to get started quickly and can serve as an example of how to build/install.  A few commands in the script need sudo access, so it may prompt you for a password.
-* `./install.sh -id` -- build library, build dependencies, and install (-d flag only needs to be passed once on a system)
-* `./install.sh -ic` -- build library, build clients (tests, benchmarks, and samples), and install
-To see more option use
-* `./install.sh -h` -- shows help
+* `./install.sh -id` -- build library, build dependencies, and install (-d flag only needs to be passed once on a system).
+* `./install.sh -ic` -- build library, build clients (tests, benchmarks, and samples), and install.
+
+To see more options use the help of the install script
+* `./install.sh -h`
 
 ### Build & install library Manually
 For a standard library installation, follow these steps:
@@ -88,7 +89,7 @@ hipsolverSgetrf(hipsolverHandle_t handle,
 
 ## Supported Fuctionality
 For a complete description of all the supported functions, see the corresponding backends' documentation
-at [rocSOLVER](https://rocsolver.readthedocs.io/en/latest/userguide_api.html) and/or [cuSOLVER](https://docs.nvidia.com/cuda/cusolver/index.html#cuds-api). 
+at [rocSOLVER API](https://rocsolver.readthedocs.io/en/latest/userguide_api.html) and/or [cuSOLVER API](https://docs.nvidia.com/cuda/cusolver/index.html#cuds-api). 
 
 ### Auxiliary functions
 
