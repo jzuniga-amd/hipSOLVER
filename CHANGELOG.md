@@ -2,22 +2,15 @@
 
 Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](https://rocm.docs.amd.com/projects/hipSOLVER/en/latest/index.html).
 
-## ## (Unreleased) hipSOLVER
+## (Unreleased) hipSOLVER
+
 ### Added
-
 ### Changed
-
 ### Removed
-
 ### Optimized
-
-### Resolved issues
-
-### Known issues
-
-### Upcoming changes
-
-### Security
+### Resolved Issues
+### Known Issues
+### Upcoming Changes
 
 
 ## hipSOLVER 2.3.0 for ROCm 6.3.0
@@ -81,12 +74,6 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
 ### Removed
 
 * Removed dependency on cblas from the hipsolver test and benchmark clients.
-- The numerical factorization in csrlsvchol will now be performed on the GPU. (The symbolic factorization is still performed on the CPU.)
-- Renamed hipsolver-compat.h to hipsolver-dense.h.
-
-### Removed
-
-- Removed dependency on cblas from the hipsolver test and benchmark clients.
 
 
 ## hipSOLVER 2.1.1 for ROCm 6.1.1
@@ -98,12 +85,6 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
 ### Resolved issues
 
 * Fixed benchmark client build when `BUILD_WITH_SPARSE` is OFF.
-
-- `BUILD_WITH_SPARSE` now defaults to OFF on Windows.
-
-### Resolved issues
-
-- Fixed benchmark client build when `BUILD_WITH_SPARSE` is OFF.
 
 
 ## hipSOLVER 2.1.0 for ROCm 6.1.0
@@ -132,12 +113,6 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
 ### Resolved issues
 
 * Fixed incorrect singular vectors returned from GESVDA.
-
-- Relax array length requirements for GESVDA.
-
-### Resolved issues
-
-- Fixed incorrect singular vectors returned from GESVDA.
 
 
 ## hipSOLVER 2.0.0 for ROCm 6.0.0
