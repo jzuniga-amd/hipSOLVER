@@ -8,9 +8,9 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
 ### Changed
 ### Removed
 ### Optimized
-### Resolved Issues
-### Known Issues
-### Upcoming Changes
+### Resolved issues
+### Known issues
+### Upcoming changes
 
 
 ## hipSOLVER 2.3.0 for ROCm 6.3.0
