@@ -81,6 +81,12 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
 ### Removed
 
 * Removed dependency on cblas from the hipsolver test and benchmark clients.
+- The numerical factorization in csrlsvchol will now be performed on the GPU. (The symbolic factorization is still performed on the CPU.)
+- Renamed hipsolver-compat.h to hipsolver-dense.h.
+
+### Removed
+
+- Removed dependency on cblas from the hipsolver test and benchmark clients.
 
 
 ## hipSOLVER 2.1.1 for ROCm 6.1.1
@@ -93,6 +99,12 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
 
 * Fixed benchmark client build when `BUILD_WITH_SPARSE` is OFF.
 
+- `BUILD_WITH_SPARSE` now defaults to OFF on Windows.
+
+### Resolved issues
+
+- Fixed benchmark client build when `BUILD_WITH_SPARSE` is OFF.
+
 
 ## hipSOLVER 2.1.0 for ROCm 6.1.0
 
@@ -104,6 +116,12 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
     * hipsolverSpScsrlsvcholHost, hipsolverSpDcsrlsvcholHost
     * hipsolverSpScsrlsvchol, hipsolverSpDcsrlsvchol
 * Added rocSPARSE and SuiteSparse as optional dependencies to hipSOLVER (rocSOLVER backend only). Use the `BUILD_WITH_SPARSE` CMake option to enable
+- Added compatibility API with hipsolverSp prefix
+- Added compatibility-only functions
+  - csrlsvchol
+    - hipsolverSpScsrlsvcholHost, hipsolverSpDcsrlsvcholHost
+    - hipsolverSpScsrlsvchol, hipsolverSpDcsrlsvchol
+- Added rocSPARSE and SuiteSparse as optional dependencies to hipSOLVER (rocSOLVER backend only). Use the `BUILD_WITH_SPARSE` CMake option to enable
   functionality for the hipsolverSp API (on by default).
 * Added hipSPARSE as an optional dependency to hipsolver-test. Use the `BUILD_WITH_SPARSE` CMake option to enable tests of the hipsolverSp API (on by default).
 
@@ -114,6 +132,12 @@ Full documentation for hipSOLVER is available at the [hipSOLVER Documentation](h
 ### Resolved issues
 
 * Fixed incorrect singular vectors returned from GESVDA.
+
+- Relax array length requirements for GESVDA.
+
+### Resolved issues
+
+- Fixed incorrect singular vectors returned from GESVDA.
 
 
 ## hipSOLVER 2.0.0 for ROCm 6.0.0
